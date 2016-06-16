@@ -1,0 +1,24 @@
+<div class="banner">
+
+	<h1 style="font-family:helvetica;font-size:40;font-weight:100">CODING IS FUN!</h1>
+  <h1>Learn to code.</h1>
+
+</div>
+<div class="ui menu">
+	<a class="item" ui-sref="home.welcome">Home</a>
+	<a class="item" ui-sref="home.game">Games</a>
+	<a class="item" ui-sref="home.media">Media</a>
+</div>
+<div class="slider_container">
+<ul rn-carousel class="image" rn-carousel-auto-slide rn-carousel-transition="fadeAndSlide" rn-carousel-pause-on-hovervrn-carousel-duration="5000">
+  <li ng-repeat="image in Images" >
+  
+    <div class="slider" ng-style="{'background-image':'url({{image.image}})','background-repeat':'no-repeat','background-size':'cover','background-position':'right 10px top -200px'}">
+    <h1>{{image.caption}}</h1>
+    <p>{{image.sub_caption}}</p>
+    </div>
+    
+  </li>
+</ul>
+</div>
+<div ui-view="main"></div>
